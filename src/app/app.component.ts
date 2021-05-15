@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'v12test';
+  age: any;
+  calculateAge(){
+    return "12";
+  }
 }
