@@ -1,4 +1,8 @@
-<button (click)="valueChange()" >
+<button (click)="valueChange()">
   Change input to 5
 </button>
-<app-samplechild [data]="data" ></app-samplechild>
+<app-samplechild [data]="data"></app-samplechild>
+<p>
+  {{ whenComponentRerendered() }}
+</p>
+<button (click)="consoleOutput()" >To console</button>
