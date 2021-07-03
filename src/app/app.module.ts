@@ -5,25 +5,19 @@ import { LoginlibModule } from '@nikhildhawan/loginpage';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { IntertestingComponent } from './intertesting/intertesting.component';
-import { TestInterceptor } from './test.interceptor';
-
+import { SampleComponent } from './comp/sample/sample.component';
+import { SamplechildComponent } from './comp/sample/samplechild/samplechild.component';
 @NgModule({
   declarations: [
     AppComponent,
-    IntertestingComponent
+    SampleComponent,
+    SamplechildComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    LoginlibModule,
     HttpClientModule
   ],
-  providers: [{
-    provide: HTTP_INTERCEPTORS,
-    useClass: TestInterceptor,
-    multi: true,
-  },],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
